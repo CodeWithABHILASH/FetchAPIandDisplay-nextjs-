@@ -11,7 +11,7 @@ function UserList({ users }: InferGetStaticPropsType<typeof getStaticProps>) {
       {
         <Row xs={1} md={3} className="g-4">
           {users.map((user: any) => (
-            <User user={user} />
+            <User key={user.id} user={user} />
           ))}
         </Row>
       }
